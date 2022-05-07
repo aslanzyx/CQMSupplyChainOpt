@@ -23,7 +23,7 @@ $$
 ## Relaxed Linear Programming
 The idea is to relax the problem to a continuous linear programming problem with additional constraint $x\le e$. This intermediate solution $\bar{x}$ shall be bound $[0, e]$. Now the problem is how to round each variable to an integer number.
 
-A descrete optimization problem like this can be treat as a searching problem over a series of decision problems. The decision problem is as follows. Given an integer $k\in[0,n]$ we ask the question: is there a feasible solution $x^*$ such that $f(x^*)\le k$. We then do binary search for a minimized $k$.
+A descrete optimization problem like this can be treat as a searching problem over a series of decision problems. The decision problem is as follows. Given an integer $k\in[0,n]$ we ask the question: is there a feasible solution $x^*$ such that $f(x^*)\le k$. We then do binary search for a minimized $k$. We could try to approximate the answer to the decision problem using the result from simplex, namely we choose the $k$ entries in $\bar{x}$ has the highest value and round them to 1 while round the others to 0, and answer yes to the decision problem if it is a feasible solution.
 
 (Implementation still in progress)
 
